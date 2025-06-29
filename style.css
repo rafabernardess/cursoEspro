@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --bg-color: #e5dee7;          /* Lilás bem clarinho para o fundo geral */
+  --second-bg-color: #c9b0d6;   /* Lilás claro para seções alternadas */
+  --text-color: #1b0224;        /* Roxo escuro quase preto para boa legibilidade */
+  --main-color: #7501a8;        /* Roxo vibrante elegante (destaque principal) */
+}
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #181818; /* ou a cor que você estiver usando */
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 60px; /* tamanho da imagem */
+  height: auto;
+  margin-right: 15px; /* espaço entre imagem e texto */
+}
+
+
+.navbar a {
+    font-size: 2.2rem;
+    color: var(--text-color);
+    margin-left: 5rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3rem ;
+    color: var(--text-color);
+    display: none;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: transparent;
+  border: .3rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2.8rem;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .5s ease;
+}
+
+.social-media a:hover {
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+
+
+.home-content h3 {
+    font-size: 5rem;
+    font-weight: 200;
+
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 5rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home-content h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.home-content p {
+    font-size: 2.1rem;
+    margin-top: 1rem;
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.5rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+}
+
+.sobre-img img {
+    transform: translateX(-8%);
+    transition: transform 0.3s ease; /* Adiciona suavidade na transição */
+    width: 420px; /* Tamanho fixo para a imagem */
+    height: 420px; /* Mantém a proporção com a largura */
+    border-radius: 7rem;
+}
+
+.sobre-img img:hover {
+    transform: translateX(-7%) scale(1.1); /* Aplica o zoom ao passar o mouse */
+}
+
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.sobre-content h2 {
+    text-align: left;
+    line-height: 1.5;
+}
+
+.sobre-content h3 {
+    font-size: 3.2rem;
+    font-weight: 200;
+    
+}
+
+.sobre-content p {
+    font-size: 1.8rem;
+    margin: 2rem 0 3rem;
+}
+
+.eventos h3{
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+.eventos p {
+  font-size: 1.5rem;
+  
+}
+
+.eventos-carousel-wrapper {
+  position: relative;
+  width: 50;
+  top: 5rem;
+  padding: 2rem 5rem;
+  overflow: hidden;
+}
+
+.eventos-viewport {
+  overflow: hidden;
+  width: 500%;
+}
+
+.eventos-track {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease;
+}
+
+.eventos-box {
+  flex: 0 0 400px;
+  background: var(--second-bg-color);
+  padding: 5rem;
+  border-radius: 1.8rem;
+  text-align: center;
+  border: 0.2rem solid var(--bg-color);
+}
+
+.eventos-box i {
+  font-size: 5rem; /* ou maior, tipo 6rem */
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+
+.btn-eventos {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  background-color: var(--main-color);
+  color: var(--second-bg-color);
+  border: none;
+  border-radius: 50%;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.btn-eventos.left {
+  left: 2rem;
+}
+
+.btn-eventos.right {
+  right: 2rem;
+}
+
+
+
+
+
+.contato h2 {
+    margin-bottom: 3rem;
+}
+
+.contato form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contato form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contato form .input-box input,
+.contato form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contato form .input-box input {
+    width: 49%;
+}
+
+.contato form textarea {
+    resize: none;
+}
+
+.contato form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+
+.footer-text p {
+    font-size: 1.1rem;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.1rem;
+    color: var(--second-bg-color);
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .eventos-container {
+        padding-bottom: 7rem;
+    }
+
+    .eventos-container {
+        flex-wrap: wrap; /* Permite que os containers quebrem a linha */
+        justify-content: space-between; /* Ajusta o alinhamento dos containers */
+        gap: 1rem; /* Espaçamento entre os containers */
+    }
+
+    .projetos {
+        padding-bottom: 7rem;
+    }
+
+    .contato {
+        min-height: auto;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content h3 {
+        font-size: 2.4rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-content p {
+        font-size: 1.8rem;
+    }
+
+  .social-media {
+        display: flex;
+        justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+        align-items: center;
+        order: 1;
+    }
+    
+    .social-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: row; /* Por padrão, o botão fica embaixo */
+        align-items: center;
+        gap: 2rem; /* Espaçamento entre os ícones e o botão */
+    }
+    
+    .btn-container {
+        order: 2; /* Garante que o botão venha depois dos ícones */
+        position: relative; /* Muda a posição do botão sem afetar os outros */
+        top: -7.5rem; /* Move o botão para cima */
+        align-self: center; /* Alinha o botão ao centro */
+        height: 4.5rem; /* Definindo uma altura fixa para o botão */
+        line-height: 2.5rem; /* Centraliza o texto verticalmente */
+        padding: 0 2.8rem; /* Mantém o espaçamento lateral */
+        left: 15rem;
+    }
+
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: .3rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2.8rem;
+    color: var(--main-color);
+    transition: .5s ease;
+}
+
+   
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+
+    .home-img {
+        width: 230px; /* Ajuste a largura do círculo aqui */
+        height: 230px; /* A altura pode ser ajustada para manter ou alterar a proporção */
+        border-radius: 50%; /* Certifique-se de que o valor mantem o círculo */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: -5px; 
+        margin-top: 1rem; 
+        animation: float 3s ease-in-out infinite, glow 3s ease-in-out infinite;
+    }
+    
+    
+    .home-img img {
+        width: 150%; /* Garante que a imagem se ajuste ao círculo */
+        transform: translateY(10px); /* Ajusta a imagem dentro do círculo */   
+          height: auto; /* Mantém a proporção da imagem */
+    }
+    
+    .sobre {
+        flex-direction: column-reverse;
+    }
+
+      .sobre-content p {
+        font-size: 1.6rem;
+    }
+
+    .sobre img {
+        width: 340px; /* Ajuste a largura do círculo aqui */
+        height: 280px; /* A altura pode ser ajustada para manter ou alterar a proporção */
+        margin-top: 2rem;
+    }
+
+    
+
+    .projetos h2 {
+        margin-bottom: 3rem;
+    }
+
+    .projetos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 617px) {
+    .projetos-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .contato form .input-box input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 365px) {
+    .home-img img {
+        width: 100vw;
+        
+    }
+
+    .sobre-img img {
+        width: 100vw;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
