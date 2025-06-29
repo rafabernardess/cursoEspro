@@ -60,14 +60,14 @@ section {
 }
 
 .logo-img {
-  width: 60px; /* tamanho da imagem */
+  width: 40px; /* tamanho da imagem */
   height: auto;
   margin-right: 15px; /* espaço entre imagem e texto */
 }
 
 
 .navbar a {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     color: var(--text-color);
     margin-left: 5rem;
     transition: .3s;
@@ -118,8 +118,8 @@ section {
 
 
 .home-content h3 {
-    font-size: 5rem;
-    font-weight: 200;
+    font-size: 4.7rem;
+    font-weight: 198;
 
 }
 
@@ -132,14 +132,14 @@ span {
 }
 
 .home-content h1 {
-    font-size: 4.8rem;
+    font-size: 4.5rem;
     font-weight: 600;
     line-height: 1.2;
 }
 
 .home-content p {
-    font-size: 2.0rem;
-    margin-top: 1rem;
+    font-size: 1.8rem;
+    margin-top: 2rem;
 }
 
 
@@ -172,8 +172,8 @@ span {
 .sobre-img img {
     transform: translateX(-8%);
     transition: transform 0.3s ease; /* Adiciona suavidade na transição */
-    width: 410px; /* Tamanho fixo para a imagem */
-    height: 410px; /* Mantém a proporção com a largura */
+    width: 400px; /* Tamanho fixo para a imagem */
+    height: 400px; /* Mantém a proporção com a largura */
     border-radius: 7rem;
 }
 
